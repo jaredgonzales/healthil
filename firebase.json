@@ -5,6 +5,7 @@
   },
   "hosting": {
     "public": "frontend/build",
+	"predeploy": "npm install ./functions && npm install ./frontend && npm --prefix ./frontend run build",
     "ignore": [
       "firebase.json",
       "**/.*",

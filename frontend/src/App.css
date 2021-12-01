@@ -1,3 +1,8 @@
+body {
+  height: 100%;
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
 }
@@ -15,7 +20,7 @@
 
 .App-header {
   background-color: #EA4498;
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,21 +31,28 @@
 
 .App-body {
 	background-color: #282c34;
-	min-height: 80vh;
 	padding: 10px;
 }
 
 .Card {
 	background-color: #FFFFFF;
-	max-width: 80vw;
 	margin: auto auto 25px auto;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+  padding: 10px;
+  max-width: 80vw;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+input {
+  text-align: start;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  padding: 4px 8px;
 }
 
 @keyframes App-logo-spin {

@@ -13,14 +13,17 @@ function App() {
 		<div className="Card">
 			<form>
 			<label>Contact Name
+				<br />
 				<input name="contact_name" type="text" />
 			</label>
 			<br />
 			<label> Company Name
+				<br />
 				<input name="company_name" type="text" />
 			</label>
 			<br />
 			<label> Collaboration Desired
+				<br />
 				<select>
 					<option value="observational">Observational Study/Research</option>
 					<option value="poc">POC/MVP</option>
@@ -30,10 +33,11 @@ function App() {
 				</select>
 			</label>
 			<br />
+			<br />
 			<input type="submit" value="Submit" />
 		</form>
 		</div>
-	  </div>
+		</div>
     </div>
   );
 }

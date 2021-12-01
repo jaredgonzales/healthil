@@ -1,1 +1,6 @@
-{}
+{
+  "dependencies": {
+    "functions": "file:functions",
+    "public": "file:frontend"
+  }
+}

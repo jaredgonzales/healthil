@@ -4,7 +4,6 @@ body {
 }
 
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -36,30 +35,39 @@ body {
 
 .Card {
 	background-color: #FFFFFF;
-	margin: auto auto 25px auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
+	margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
   padding: 10px;
   max-width: 80vw;
 }
 
-.App-link {
-  color: #61dafb;
+.input-form {
+  text-align: left;
+  padding-left: 25px;
 }
 
-input {
+.input-form input {
   text-align: start;
+  display: inline-block;
+  min-width: 60%;
+  max-width: 80%;
   background-color: #eeeeee;
   border-radius: 5px;
   padding: 4px 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-form input[type=submit] {
+  display: block;
+  margin: auto;
+  text-align: center;
+  background-color: #EA4498;
+  color:#FFFFFF;
+}
+
+.input-form input[type=submit]:hover {
+  background-color: #a70154;
+  color: #FFFFFF;
+  cursor:pointer;
 }

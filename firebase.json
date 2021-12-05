@@ -10,7 +10,12 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+      "**/node_modules/**"
+    ],
+	"rewrites" : [ {
+	  "source": "/submitApplicationForm",
+	  "function" : "/submitApplicationForm"
+	} ]
   },
   "storage": {
     "rules": "storage.rules"

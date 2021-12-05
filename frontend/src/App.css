@@ -43,31 +43,6 @@ body {
   max-width: 80vw;
 }
 
-.input-form {
-  text-align: left;
-  padding-left: 25px;
-}
-
-.input-form input {
-  text-align: start;
-  display: inline-block;
-  min-width: 60%;
-  max-width: 80%;
-  background-color: #eeeeee;
-  border-radius: 5px;
-  padding: 4px 8px;
-}
-
-.input-form input[type=submit] {
-  display: block;
-  margin: auto;
+.text-center {
   text-align: center;
-  background-color: #EA4498;
-  color:#FFFFFF;
-}
-
-.input-form input[type=submit]:hover {
-  background-color: #a70154;
-  color: #FFFFFF;
-  cursor:pointer;
 }

@@ -1,17 +1,15 @@
-import logo from './../logo.svg';
+import {Header} from './../components/core';
+
 import './../App.css';
+import './../css/form.css';
 
 function ApplicationForm() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<h2>
-					HealthIL Startup Assessment Form
-				</h2>
-			</header>
+			<Header title="HealthIL Startup Application Form" />
 			<div className="App-body">
 				<div className="Card">
-					<form class="input-form" action="http://localhost:5001/healthil-tamid/us-central1/helloName">
+					<form class="input-form" action="/submitApplicationForm">
 						<div class="field">
 							<label for="contact_name">Contact Name</label>
 							<br />
@@ -27,7 +25,7 @@ function ApplicationForm() {
 						<div class="field">
 							<label for="collaboration"> Collaboration Desired</label>
 							<br />
-							<select id="collaboration" name="collaboration">
+							<select id="collaboration" name="collaboration" required >
 								<option></option>
 								<option value="observational">Observational Study/Research</option>
 								<option value="poc">POC/MVP</option>
@@ -36,6 +34,17 @@ function ApplicationForm() {
 								<option value="commercialization">Commercialization/Pre-commercialization</option>
 							</select>
 						</div>
+
+						<div class="field">
+							<label for="partnership"> Partnership Interest?</label>
+							<br />
+							<select id="partnership" name="partnership" required >
+								<option></option>
+								<option value="true">True</option>
+								<option value="false">False</option>
+							</select>
+						</div>
+
 						<br />
 						<input type="submit" value="Submit" />
 					</form>

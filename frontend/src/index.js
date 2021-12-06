@@ -13,14 +13,15 @@ import InternalAssessment from './pages/internalAssessment';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Routes>
-      <Route path={ROUTES.LANDING} element={<App />} />
-      <Route path={ROUTES.APPLICATIONFORM} element={<ApplicationForm />} />
-      <Route path={ROUTES.APPLICATIONLIST} element={<ApplicationList />} />
-      <Route path={ROUTES.INTERNALASSESSMENT} element={<InternalAssessment />} />
+      <Routes>
+        <Route index path={ROUTES.LANDING} element={<App />} />
+        <Route path={ROUTES.APPLICATIONFORM} element={<ApplicationForm />} />
+        <Route path={ROUTES.APPLICATIONLIST} element={<ApplicationList />} />
+        <Route path={ROUTES.INTERNALASSESSMENT} element={<ApplicationList />} />
+        <Route path={`${ROUTES.INTERNALASSESSMENT}/:application`} element={<InternalAssessment />} />
     </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+  </BrowserRouter>
+  </React.StrictMode >,
   document.getElementById('root')
 );
 

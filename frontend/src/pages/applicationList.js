@@ -10,7 +10,8 @@ function ApplicationList() {
     /* Import list of startups from the database */
     var startupList = ['startup001', 'startup002', 'another_startup', 'new_startup']
     const hospitalName = "hospital001";
-    fetch("/getApplications?site="+{hospitalName}).then(response => response.json()).then(data => console.log(data));
+    var listAPIURL = "/getApplications?site=" + hospitalName;
+    fetch(listAPIURL).then(response => response.json()).then(data => console.log(data));
     
     return (
         <div className="App">

@@ -5,24 +5,30 @@
   },
   "hosting": {
     "public": "frontend/build",
-	"predeploy": "npm install ./functions && npm install ./frontend && npm --prefix ./frontend run build",
+    "predeploy": "npm install ./functions && npm install ./frontend && npm --prefix ./frontend run build",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-	"rewrites" : [ {
-	  "source": "/readApplication",
-	  "function" : "/readApplication"
-	},
-  {
-	  "source": "/getApplications",
-	  "function" : "/getApplications"
-	},
-  {
-	  "source": "/submitApplication",
-	  "function" : "/submitApplication"
-	}]
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/readApplication",
+        "function": "/readApplication"
+      },
+      {
+        "source": "/getApplications",
+        "function": "/getApplications"
+      },
+      {
+        "source": "/submitApplication",
+        "function": "/submitApplication"
+      }
+    ]
   },
   "storage": {
     "rules": "storage.rules"

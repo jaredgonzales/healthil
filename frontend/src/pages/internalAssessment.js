@@ -3,7 +3,7 @@ import {Header} from '../components/core';
 import { useParams } from "react-router-dom";
 
 
-function InternalAssessment(props) {
+function InternalAssessment() {
     let params = useParams();
     var application = params.application;
     return (

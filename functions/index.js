@@ -3,16 +3,6 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 const db = admin.firestore();
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  //functions.logger.info("Hello logs!", {structuredData: true});
-  response.send("Hello from Firebase!");
-});
-
-//helloName
-
 exports.submitApplication = functions.https.onRequest((request, response) => {
   var info = request.query;
   db.collection("sites")
@@ -20,9 +10,10 @@ exports.submitApplication = functions.https.onRequest((request, response) => {
     .collection("applications")
     .doc(info.company_name)
     .set(info);
-  response.send("Successfully register " + info.company_name + "!");
+  response.send(
+    "Successfully submit application for " + info.company_name + "!"
+  );
 });
-// exports.submitApplicationForm = functions.https.onRequest()--> write
 
 exports.readApplication = functions.https.onRequest((request, response) => {
   var company_name = request.query.company_name;
@@ -35,7 +26,6 @@ exports.readApplication = functions.https.onRequest((request, response) => {
       if (doc.exists) {
         response.send(doc.data());
       } else {
-        // doc.data() will be undefined in this case
         response.send("No such document!");
       }
     })
@@ -43,6 +33,7 @@ exports.readApplication = functions.https.onRequest((request, response) => {
       response.send("Error getting document:", error);
     });
 });
+
 exports.getApplications = functions.https.onRequest((request, response) => {
   const applicationList = db
     .collection("sites")

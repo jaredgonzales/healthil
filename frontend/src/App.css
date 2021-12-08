@@ -35,11 +35,12 @@ body {
 
 .Card {
 	background-color: #FFFFFF;
-	margin: auto;
+	margin: 10px auto;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
   padding: 10px;
+  min-height: 20vh;
   max-width: 80vw;
 }
 

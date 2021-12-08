@@ -4,8 +4,8 @@ import './../App.css';
 import './../css/form.css';
 
 function ApplicationView(props) {
-	var applicationName = props.application
-	var applicationData = fetch("/readApplication?company_name=" + { applicationName })
+	var readAPIURL = "/readApplication?company_name=" + props.application;
+	var applicationData = fetch(readAPIURL)
 		.then(response => response.json())
 		.then(data => {
 			console.log(data);

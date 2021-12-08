@@ -1,9 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import ApplicationForm from './pages/application';
+import { Link } from "react-router-dom";
+import { Header } from './components/core';
+import { APPLICATIONFORM, APPLICATIONLIST} from './pages/routes';
+
+
+
 
 function App() {
-  return <ApplicationForm />
+  return <div>
+    <Header title="HealthIL Application System - Directory" />
+    <div class="Card text-center">
+      <nav>
+        <Link to={APPLICATIONFORM}>Startup Application Form</Link> | {" "}
+        <Link to={APPLICATIONLIST}>Pending Applications</Link>
+      </nav>
+    </div>
+  </div>
 }
 
 export default App;

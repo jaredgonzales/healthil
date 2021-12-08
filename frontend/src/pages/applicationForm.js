@@ -1,7 +1,20 @@
-import {Header} from './../components/core';
+import { Header } from './../components/core';
 
 import './../App.css';
 import './../css/form.css';
+
+export function FormTextField(props) {
+	var id = props.id;
+	var label = props.label;
+	var placeholder = props.placeholder;
+	return (
+		<div className="field">
+			<label for={id}> {label}</label>
+			<br />
+			<input id={id} name={id} placeholder={placeholder} type="text" />
+		</div>
+	);
+}
 
 function ApplicationForm() {
 	return (
@@ -10,19 +23,24 @@ function ApplicationForm() {
 			<div className="App-body">
 				<div className="Card">
 					<form class="input-form" action="/submitApplicationForm">
-						<div class="field">
-							<label for="contact_name">Contact Name</label>
-							<br />
-							<input id="contact_name" name="contact_name" placeholder="Full name..." type="text" />
-						</div>
+
+						<FormTextField id="contact_name" label="Contact Name" placeholder="Full name" />
+
+						<FormTextField id="company_name" label="Company Name" placeholder="Your company name" />
 
 						<div class="field">
-							<label for="company_name"> Company Name</label>
+							<label for="email"> Email</label>
 							<br />
-							<input id="company_name" name="company_name" type="text" placeholder="Your Company Name" />
+							<input id="email" name="email" type="text" placeholder="example@gmail.com" />
 						</div>
 
-						<div class="field">
+						<FormTextField id="website" placeholder="www.example.com" label="Website" />
+						<FormTextField id="role" placeholder="Your role in company" label="Role" />
+						<FormTextField id="country" placeholder="Country" label="Country" /> {/* TODO: Make this a dropdown */}
+						<FormTextField id="product_type" placeholder="Product category" label="Product Type" />
+
+						
+						<div class="full-field">
 							<label for="collaboration"> Collaboration Desired</label>
 							<br />
 							<select id="collaboration" name="collaboration" required >
@@ -35,7 +53,7 @@ function ApplicationForm() {
 							</select>
 						</div>
 
-						<div class="field">
+						<div class="full-field">
 							<label for="partnership"> Partnership Interest?</label>
 							<br />
 							<select id="partnership" name="partnership" required >
@@ -46,7 +64,7 @@ function ApplicationForm() {
 						</div>
 
 						<br />
-						<input type="submit" value="Submit" />
+						<input class="full-field" type="submit" value="Submit Application" />
 					</form>
 				</div>
 			</div>

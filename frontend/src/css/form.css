@@ -1,13 +1,18 @@
 .input-form {
   text-align: left;
-  padding-left: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto 25px;
 }
 
-.input-form input {
+.disabled-form {
+  text-align: left;
+  padding: auto 25px;
+}
+
+.input-form input[type=text] {
   text-align: start;
-  display: inline-block;
-  min-width: 60%;
-  max-width: 80%;
+  width: 80%;
   background-color: #eeeeee;
   border-radius: 5px;
   padding: 4px 8px;
@@ -17,8 +22,10 @@
   display: block;
   margin: auto;
   text-align: center;
+  font-weight: bold;
   background-color: #EA4498;
   color:#FFFFFF;
+  padding: 8px 8px;
 }
 
 .input-form input[type=submit]:hover {
@@ -26,3 +33,25 @@
   color: #FFFFFF;
   cursor:pointer;
 }
+
+.field {
+  display: inline-block;
+  width: 48%;
+  margin-bottom: 8px;
+}
+
+.full-field {
+  display: inline-block;
+  flex-basis: 100%;
+  min-width: 60%;
+  max-width: 70%;
+  margin-bottom: 12px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  height: 75px;
+}
+

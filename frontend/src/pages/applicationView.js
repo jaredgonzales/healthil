@@ -17,7 +17,7 @@ function ApplicationView(props) {
 
 	return (
 		<div className="Card">
-			<div class="input-form">
+			<div class="disabled-form">
 				<h1>Submitted Application</h1>
 				<div class="field">
 					<label for="example-field">Example label</label>

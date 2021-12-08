@@ -13,10 +13,6 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
         "source": "/readApplication",
         "function": "/readApplication"
       },
@@ -27,6 +23,10 @@
       {
         "source": "/submitApplication",
         "function": "/submitApplication"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },

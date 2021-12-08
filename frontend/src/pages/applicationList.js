@@ -4,10 +4,14 @@ import {LinkList} from './../components/list';
 
 // Lists all available Applications to Review
 
-/* Import list of startups from the database */
-const startupList = ['startup001', 'startup002', 'another_startup', 'new_startup']
+
 
 function ApplicationList() {
+    /* Import list of startups from the database */
+    var startupList = ['startup001', 'startup002', 'another_startup', 'new_startup']
+    const hospitalName = "hospital001";
+    fetch("/getApplications?site="+{hospitalName}).then(response => response.json()).then(data => console.log(data));
+    
     return (
         <div className="App">
             <Header title="Pending Applications" />

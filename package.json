@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "functions": "file:functions",
-    "public": "file:frontend"
+    "public": "file:frontend",
+    "sanitize": "^2.1.0"
   }
 }
